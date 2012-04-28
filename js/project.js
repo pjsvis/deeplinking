@@ -1,4 +1,4 @@
-angular.module('project', ['mongolab'])
+angular.module('project', ['mongolabPjs'])
     .config(function($routeProvider) {
         $routeProvider.
             when('/list', {controller:ListCtrl, template:'../templates/list.html'})

@@ -1,9 +1,9 @@
 // This is a module for cloud persistance in mongolab - https://mongolab.com
-angular.module('parse', ['ngResource']).
+angular.module('mongolabPjs', ['ngResource']).
     factory('Project', function($resource) {
-        var Project = $resource('https://api.parse.com/1' +
-            '/angularjs/collections/projects/:id',
-            { apiKey: '4f847ad3e4b08a2eed5f3b54' }, {
+        var Project = $resource('https://api.mongolab.com/api/1/databases' +
+            '/todo/collections/projects/:id',
+            { apiKey: '4f99a253e4b015f77d298ab8' }, {
                 update: { method: 'PUT' }
             }
         );
