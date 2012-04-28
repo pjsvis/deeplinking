@@ -1,2 +1,32 @@
-<h3>About ToDos</h3>
-        <p>This app manages a ToDo list and persists it in a MongoHq database.</p>
+<div class="container well" ng-app="components">
+    <h3>About</h3>
+
+    <ul class="nav nav-pills" ng-init="pill=1">
+        <li ng-class="pill==1 && 'active'"><a ng-click="pill=1">Todo Items</a></li>
+        <li ng-class="pill==2 && 'active'"><a ng-click="pill=2">UI Design Issues</a></li>
+        <li ng-class="pill==3 && 'active'"><a ng-click="pill=3">Server Comms</a></li>
+    </ul>
+    <div id="pill-1" ng-show="pill==1">
+    <ol>
+        <li>Combine the Edit and Create and List controllers so that we can
+            use tabs to control everything in the same page</li>
+
+    </ol>
+        <!--
+        <div ng-include="'/templates/list.html'" ng-controller="ListCtrl"></div>
+        -->
+    </div>
+    <div id="pill-2" ng-show="pill==2">
+        <ol>
+            <li>We don't really need components as we can easily wire up a
+                tab set like this with just a few directives</li>
+        </ol>
+       <!-- <div ng-include="'/templates/detail.html'" ng-controller="CreateCtrl"></div>-->
+    </div>
+    <div id="pill-3" ng-show="pill==3">
+        <ol>
+            <li>How do we communicate with the server?</li>
+        </ol>
+      <!--  <div ng-include="'/templates/detail.html'" ng-controller="EditCtrl"></div>-->
+    </div>
+</div>

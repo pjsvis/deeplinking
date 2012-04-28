@@ -1,4 +1,4 @@
-angular.module('project', ['mongolabPjs'])
+angular.module('project', ['mongolab'])
     .config(function($routeProvider) {
         $routeProvider.
             when('/list', {controller:ListCtrl, template:'../templates/list.html'})
@@ -8,8 +8,10 @@ angular.module('project', ['mongolabPjs'])
             .otherwise({redirectTo:'/list'});
     });
 
+
 function AboutCtrl($scope, Project){
 }
+
 
 function ListCtrl($scope, Project) {
     $scope.projects = Project.query();
