@@ -5,6 +5,7 @@ angular.module('project', ['mongolab'])
             .when('/edit/:projectId', {controller:EditCtrl, template:'../templates/detail.html'})
             .when('/new', {controller:CreateCtrl, template:'../templates/detail.html'})
             .when('/about', {controller:AboutCtrl, template:'../templates/about.html'})
+            .when('/test', {controller:TestCtrl, template:'../templates/test.html'})
             .otherwise({redirectTo:'/list'});
     });
 
@@ -12,6 +13,8 @@ angular.module('project', ['mongolab'])
 function AboutCtrl($scope, Project){
 }
 
+function TestCtrl($scope, Project){
+}
 
 function ListCtrl($scope, Project) {
     $scope.projects = Project.query();
