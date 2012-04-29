@@ -11,9 +11,12 @@ angular.module('project', ['mongolab'])
 
 
 function AboutCtrl($scope, Project){
+
 }
 
 function TestCtrl($scope, Project){
+   $scope.today= Date.create().format('{Weekday} {Month} {dd}, {yyyy}') ;
+   $scope.nextWeek=(6).daysAfter($scope.today).format('{Weekday} {Month} {dd}, {yyyy}') ;
 }
 
 function ListCtrl($scope, Project) {
@@ -28,7 +31,6 @@ function CreateCtrl($scope, $location, Project) {
         });
     }
 }
-
 
 function EditCtrl($scope, $location, $routeParams, Project) {
     var self = this;
